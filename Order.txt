@@ -1,0 +1,28 @@
+TitleSlide.py
+
+MIXTURES
+MixtureModels.py - DAG and Generative Process, Graph of 3 gaussians, then X graph
+
+CAUSALITY
+CausalHeterogeneity.py - Antibiotics (heterogeneity is virus, unconfounded, then confounded by doctors choice), Vaccines
+FundimentalProblem.py - Exchangeability, ITE and ATE
+RCTsInstruments.py - R part, C part refines
+ClassicTechniques.py - Covariate adjustments define a metric under which randomization is not needed because everythign is exchangeable
+ClusteringCATEs.py - Disjoint regions now CATEs, how to do overlap due to unobserved confounding (non-deterministic as a function of covariates)
+    ATE_Subset_HTE.py - Maybe include, then return to do the colorblind PartitionAndOverlap, then back to suggest existance of MTE?
+
+SYNTHETIC POTENTIAL OUTCOMES
+TensorMTE.py
+Identifiability <- Skip Steps animation
+SPO_ATE.py - citation Miao
+SPO_MTE.py - second moments 
+Coins.py
+FullHierarchy.py - 
+    Overlap (1 vs 2 boundary) has implications for expanding causal methods, and privacy
+    Mixture vs MTE (2 vs 3 boundary) points towards a fundimental granularity for scientific classification
+    MTE vs ATE - difference is a conditionally independent sample, which is interestingly the opposite of an instrument
+    Add Rectangle for Identifying Existance of MTE, move around
+FinalThoughts.py   
+    Importance of the Granularity Identifiability - Dont Under identify, dont over identify
+    Importance of Sample Complexity
+Thanks.py

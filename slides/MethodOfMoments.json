@@ -1,0 +1,79 @@
+{
+  "slides": [
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/MethodOfMoments/3dee386bb43e07d626a0beac76046d65ad014c4eec85b03873c67b8b1a30aab7.mp4",
+      "rev_file": "slides/files/MethodOfMoments/3dee386bb43e07d626a0beac76046d65ad014c4eec85b03873c67b8b1a30aab7_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/MethodOfMoments/b58b8c81c078a16686f88521aa09ecb85700303d700a78c114daa3cbc773bb57.mp4",
+      "rev_file": "slides/files/MethodOfMoments/b58b8c81c078a16686f88521aa09ecb85700303d700a78c114daa3cbc773bb57_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/MethodOfMoments/56e37d8d1a1fd000864bcf71cff4587f98b7ef3273382176ea4dee9351c32742.mp4",
+      "rev_file": "slides/files/MethodOfMoments/56e37d8d1a1fd000864bcf71cff4587f98b7ef3273382176ea4dee9351c32742_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/MethodOfMoments/c92a5083eabee69bc037162b0784b05f1e1b9c17894597f308eaa12c73e74bba.mp4",
+      "rev_file": "slides/files/MethodOfMoments/c92a5083eabee69bc037162b0784b05f1e1b9c17894597f308eaa12c73e74bba_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/MethodOfMoments/463055f83ab297662c3ca2f18516b2717e764102b04d5f587021dc861fdba547.mp4",
+      "rev_file": "slides/files/MethodOfMoments/463055f83ab297662c3ca2f18516b2717e764102b04d5f587021dc861fdba547_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/MethodOfMoments/61e030be69924ebb74905cc7586801038383ba48b5c27ba8dcf87237d036d27a.mp4",
+      "rev_file": "slides/files/MethodOfMoments/61e030be69924ebb74905cc7586801038383ba48b5c27ba8dcf87237d036d27a_reversed.mp4"
+    },
+    {
+      "loop": false,
+      "auto_next": false,
+      "playback_rate": 1.0,
+      "reversed_playback_rate": 1.0,
+      "notes": "",
+      "dedent_notes": true,
+      "file": "slides/files/MethodOfMoments/f9ae096b9335be25c2a9da5fb164e4df45cf1c526151e99f82983d28d83c12c8.mp4",
+      "rev_file": "slides/files/MethodOfMoments/f9ae096b9335be25c2a9da5fb164e4df45cf1c526151e99f82983d28d83c12c8_reversed.mp4"
+    }
+  ],
+  "resolution": [
+    1280,
+    720
+  ],
+  "background_color": "black"
+}

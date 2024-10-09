@@ -1,0 +1,10 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/bmazaher/Presentations/SPO-Stanford/media/videos/MethodOfMoments/720p30/partial_movie_files/MethodOfMoments/2016333726_2577486825_3802953087.mp4'
+file 'file:/Users/bmazaher/Presentations/SPO-Stanford/media/videos/MethodOfMoments/720p30/partial_movie_files/MethodOfMoments/543634251_2541118750_3956549479.mp4'
+file 'file:/Users/bmazaher/Presentations/SPO-Stanford/media/videos/MethodOfMoments/720p30/partial_movie_files/MethodOfMoments/543634251_2226081383_1693383950.mp4'
+file 'file:/Users/bmazaher/Presentations/SPO-Stanford/media/videos/MethodOfMoments/720p30/partial_movie_files/MethodOfMoments/543634251_2533253254_413520020.mp4'
+file 'file:/Users/bmazaher/Presentations/SPO-Stanford/media/videos/MethodOfMoments/720p30/partial_movie_files/MethodOfMoments/543634251_2488896375_1286652956.mp4'
+file 'file:/Users/bmazaher/Presentations/SPO-Stanford/media/videos/MethodOfMoments/720p30/partial_movie_files/MethodOfMoments/543634251_187144766_4158090782.mp4'
+file 'file:/Users/bmazaher/Presentations/SPO-Stanford/media/videos/MethodOfMoments/720p30/partial_movie_files/MethodOfMoments/543634251_2552389862_4064471278.mp4'
+file 'file:/Users/bmazaher/Presentations/SPO-Stanford/media/videos/MethodOfMoments/720p30/partial_movie_files/MethodOfMoments/543634251_1129149032_3609795500.mp4'
+file 'file:/Users/bmazaher/Presentations/SPO-Stanford/media/videos/MethodOfMoments/720p30/partial_movie_files/MethodOfMoments/543634251_2794245654_2755443188.mp4'
