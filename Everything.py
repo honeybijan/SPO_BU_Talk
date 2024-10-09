@@ -488,7 +488,7 @@ class Everything(Slide):
             self.next_slide()
 
         moments = Text("Method of Moments").scale(.5)
-        moments_cite = Paragraph('Pearson, K. (1936), "Method of Moments and Method of Maximum Likelihood", Biometrika 28(1/2), 35–59.').scale(.25)
+        moments_cite = Paragraph('Pearson, K. (1936). Method of Moments and Method of Maximum Likelihood. Biometrika 28(1/2), 35–59.').scale(.25)
         moment_group = VGroup(moments, moments_cite).arrange(DOWN).to_edge(DOWN, buff = 1)
         self.play(FadeIn(moment_group))
         self.wait(.2)
@@ -669,11 +669,11 @@ class Everything(Slide):
         
         subject_hetero = Text("Heterogeneity in Subject").scale(.5)
         causal_dag_subject = dag("Strain", "Vaccine", "Effectiveness", dashed_ct = True).next_to(subject_hetero, DOWN, buff = .25).scale(.5)
-        virus = lambda: SVGMobject(file_name = "svgs/virus.svg", color = PURPLE, fill_color = PURPLE).scale(.12)
+        virus = lambda: SVGMobject(file_name = "svgs/virus.svg", color = PURPLE, fill_color = PURPLE).scale(.12).set_color(PURPLE)
         viruses = VGroup(*[virus() for i in range(25)]).arrange_in_grid(5, 5, buff=.1).next_to(causal_dag_subject, DOWN, buff = .5)
         s_total = VGroup(subject_hetero, causal_dag_subject, viruses)
 
-        confounding_hetero = Text("Confounded Heterogeneity").scale(.5)
+        confounding_hetero = Text("Confounding Heterogeneity").scale(.5)
         causal_dag_confounding = dag("Bacteria", "Antibiotic", "Effectiveness", dashed_ct = False).next_to(confounding_hetero, DOWN, buff = .25).scale(.5)
         bacterium = lambda: SVGMobject(file_name = "svgs/bacteria.svg", color = PURPLE, fill_color = PURPLE).scale(.12)
         bacteria = VGroup(*[bacterium() for i in range(25)]).arrange_in_grid(5, 5, buff=.1).next_to(causal_dag_confounding, DOWN, buff = .5)
@@ -771,8 +771,8 @@ class Everything(Slide):
         te = MathTex(r"{{\text{Treatment Effect}}}", r"=", r"{{Y^{(1)}}}", r"-", r"{{Y^{(0)}}}").scale(.7).to_edge(RIGHT, buff=1).shift(.5 * DOWN)
         potential_outcomes = Text("Potential Outcomes").scale(.5)
         po_cite = VGroup(
-            Paragraph("Neyman, Jerzy (1923). Sur les applications de la theorie des probabilites\n aux experiences agricoles: Essai des principes. Master's Thesis.").scale(.25),
-            Paragraph('Rubin, Donald (1974). "Estimating Causal Effects of Treatments in Randomized\n and Nonrandomized Studies". J. Educ. Psychol. 66 (5): 688–701 [p. 689].').scale(.25)
+            Paragraph('Neyman, Jerzy (1923).\nSur les applications de la theorie des probabilites aux experiences agricoles: Essai des principes.\nRoczniki Nauk Rolniczych, 10(1), 1-51.', alignment="center").scale(.25),
+            Paragraph('Rubin, Donald (1974).\nEstimating Causal Effects of Treatments in Randomized and Nonrandomized Studies.\nJ. Educ. Psychol. 66 (5): 688–701 [p. 689].', alignment="center").scale(.25)
         ).arrange(DOWN)
         po_section = VGroup(potential_outcomes, po_cite).arrange(DOWN).to_edge(RIGHT, buff = .25).shift(.5 * DOWN)
         self.play(Write(po1), Write(po0), run_time = 1)
@@ -851,8 +851,8 @@ class Everything(Slide):
         treated_red_blues = [RED.interpolate(BLUE, random.random()) for i in range(9)]
         untreated_red_blues = [RED.interpolate(BLUE, random.random()) for i in range(9)]
         CovAdjustments = Text("Adjustment Sets").scale(.5)
-        CovAdjustments_cite = Paragraph("Pearl, J. (2009). Causality. Cambridge university press.").scale(.25)
-        full_cite = VGroup(CovAdjustments, CovAdjustments_cite).arrange(DOWN, center=True).to_corner(DR, buff = .25)
+        CovAdjustments_cite = Paragraph('Pearl, J. (2009). Causality. Cambridge university press.').scale(.25)
+        full_cite = VGroup(CovAdjustments, CovAdjustments_cite).arrange(DOWN, center=True).to_corner(DR, buff = .5)
         self.play(*[stick.animate.set_color(c) for stick, c in zip(group_of_sticks, treated_red_blues)],
                     *[stick.animate.set_color(c) for stick, c in zip(group_of_sticks_treated, treated_red_blues)],
                     *[stick.animate.set_color(c) for stick, c in zip(group_of_sticks2, untreated_red_blues)],
@@ -880,7 +880,7 @@ class Everything(Slide):
         c1_circle = Circle(radius = 1, color = RED, fill_color = RED.interpolate(BLUE,.25), fill_opacity=.3).move_to(xaxes.coords_to_point(*mean1))
         whole_graph = VGroup(c1_circle, c2_circle, peoples, xaxes)
         CausalForest = Text("Causal Forests for HTEs").scale(.5)
-        CF_cite = Paragraph('S. Wagner, S. Athey (2018). "Estimation and Inference of Heterogeneous Treatment\n Effects using Random Forests." Journal of the American Statistical Association.').scale(.25)
+        CF_cite = Paragraph('S. Wagner, S. Athey (2018).\nEstimation and Inference of Heterogeneous Treatment Effects using Random Forests.\nJournal of the American Statistical Association, 113(523), 1228-1242.', alignment="center").scale(.25)
         full_cite_cf = VGroup(CausalForest, CF_cite).arrange(DOWN, center=True).to_edge(RIGHT, buff = .75).shift(1.5 * UP)
         self.play(Create(c1_circle), Create(c2_circle))
         self.wait(.2)
@@ -948,9 +948,9 @@ class Everything(Slide):
 
         moments = Tex(r"Obervable Moments: $\mathbb{E}[V_1=i, V_2=j, V_3=\ell]$").scale(.5)
         Thm = Tex(r"Generic identifiability when $\min(n_1, k) + \min(n_2, k) + \min(n_3, k) \geq 2k + 2$").scale(.5)
-        citation1 = Paragraph("J. Kruskal (1977). Three-way arrays: Rank and uniqueness of trilinear decompositions, with application\n to arithmetic complexity and statistics. Linear Algebra Appl.").scale(.25)
-        citation2 = Paragraph("E. Allman, C. Matias, J. Rhodes (2009). Identifiability of parameters in latent structure models with many\n observed variables. Anals of Statistics.").scale(.25)
-        citation3 = Paragraph("A. Anandkumar, R. Ge, D. Hsu, S. Kakade, M. Telgarsky (2014). Tensor decompositions for learning latent\n variable models. Journal of Machine Learning Research.").scale(.25)
+        citation1 = Paragraph('J. Kruskal (1977).\nThree-way arrays: Rank and uniqueness of trilinear decompositions, with application to arithmetic complexity and statistics.\nLinear algebra and its applications, 18(2), 95-138.', alignment="center").scale(.25)
+        citation2 = Paragraph('E. Allman, C. Matias, J. Rhodes (2009).\nIdentifiability of parameters in latent structure models with many observed variables.\n Ann. Statist. 37(6A): 3099-3132.', alignment="center").scale(.25)
+        citation3 = Paragraph('A. Anandkumar, R. Ge, D. Hsu, S. Kakade, M. Telgarsky (2014).\nTensor decompositions for learning latent variable models".\nJ. Mach. Learn. Res., 15(1), 2773-2832.', alignment="center").scale(.25)
         ident_result = VGroup(moments, Thm, citation1, citation2, citation3)
         ident_result.arrange(DOWN, center=True).next_to(col_vecs, DOWN).shift(.1 * DOWN)
         for t in ident_result:
@@ -967,7 +967,7 @@ class Everything(Slide):
         self.next_slide()
 
         CATEs = Tex(r"CATEs: $\mathbb{E}[Y^{(1)} - Y^{(0)} \; | \; u] = \mathbb{E}[Y \; | \; T=1, u] - \mathbb{E}[Y \; | \; T=0, u]$").scale(.75)
-        ClearCite = Paragraph("S.L. Gordon, B. Mazaheri, Y. Rabani, and L. Schulman (2023). \nCausal Inference Despite Limited Global Confounding via Mixture Models. \nIn Conference on Causal Learning and Reasoning (pp. 574-601). PMLR.").scale(.4)
+        ClearCite = Paragraph('S.L. Gordon, B. Mazaheri, Y. Rabani, and L. Schulman (2023).\nCausal Inference Despite Limited Global Confounding via Mixture Models.\nIn Conference on Causal Learning and Reasoning (pp. 574-601). PMLR.', alignment="center").scale(.3)
         DoesntMatter1 = Tex(r"$\mathbb{E}[V_1 \;|\; u], \mathbb{E}[V_3 \;|\; u]$ are useless parameters!").scale(.5)
         DoesntMatter2 = Tex(r"Only the \emph{difference} between potential outcomes matters!").scale(.5)
         CATEs_and_DMs = VGroup(CATEs, ClearCite, DoesntMatter1, DoesntMatter2).arrange(DOWN, buff=.5).next_to(FullGraph, DOWN, buff=.5)
@@ -1206,7 +1206,7 @@ class Everything(Slide):
         proceedure = VGroup(main_highlight, moment_matching_matrix_a, moment_matching_matrix_b, inverse_a, inverse_b, simple_ATE_eq)
         identifiability = Tex(r"Identifiability $\rightarrow$ Matrix Singularity", color=WHITE).scale(.8)
         stability = Tex(r"Stability $\rightarrow$ Matrix Condition Number", color=WHITE).scale(.8)
-        cite = Paragraph("W. Miao, X. Shi., Y. Li and E.J. Tchetgen (2024). A confounding bridge approach for double negative\n control inference on causal effects. Statistical Theory and Related Fields, pp.1-12.").scale(.4)
+        cite = Paragraph('W. Miao, Z. Geng, and E.J. Tchetgen Tchetgen (2018).\nIdentifying causal effects with proxy variables of an unmeasured confounder.\nBiometrika, 105(4), 987-993.', alignment="center").scale(.4)
         main_points = VGroup(identifiability, stability, cite)
         main_points.arrange(DOWN)
         proceedure.generate_target()
@@ -1549,7 +1549,7 @@ class Everything(Slide):
         dof2 = Tex(r"$k-1$ from $U$").scale(.5)
         dof3 = Tex(r"$k$ from the conditionals for $R$").scale(.5)
         identification = Tex(r"Identifiability with $2k-1$ moments", color=GREEN).scale(.7)
-        citation = Paragraph("J. Li, Rabani, L. Schulman, C. Swamy (2015).\nLearning Arbitrary Statistical Mixtures of Discrete Distributions.\nIn Symposium on Theory of Computing.").scale(.25)
+        citation = Paragraph('J. Li, Rabani, L. Schulman, C. Swamy (2015).\nLearning Arbitrary Statistical Mixtures of Discrete Distributions.\nIn Proceedings of the forty-seventh annual ACM symposium on Theory of computing (pp. 743-752).', alignment="center").scale(.25)
         ident_result = VGroup(dof1, dof2, dof3, identification, citation).shift(.5 * DOWN)
         ident_result.arrange(DOWN, center=True).to_edge(RIGHT, buff = .5)
         for t in ident_result:
@@ -1625,7 +1625,7 @@ class Everything(Slide):
             self.next_slide()
             self.play(Create(conc))
 
-        citation = Paragraph("B. Mazaheri, C. Squires and C. Uhler (2024).\nSynthetic Potential Outcomes and Causal Mixture Identifiability.\nPreprint on arXiv, new version soon!").scale(.4)
+        citation = Paragraph('B. Mazaheri, C. Squires and C. Uhler (2024).\nSynthetic Potential Outcomes and Causal Mixture Identifiability.\n Preprint on arXiv, new version soon!', alignment="center").scale(.4)
         citation.to_corner(DR, buff=.5)
         self.wait(.2)
         self.next_slide()
