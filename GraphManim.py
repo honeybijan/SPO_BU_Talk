@@ -57,7 +57,7 @@ class RectVertex(VGroup):
         self.Label = Tex(label, font_size = 18, color=WHITE)
         self.Outer_Rect = SurroundingRectangle(self.Label, color=WHITE, buff = .1)
         if not observed:
-            Outer_Rect = DashedVMobject(Outer_Rect, num_dashes = 30)
+            self.Outer_Rect = DashedVMobject(self.Outer_Rect, num_dashes = 30)
         self.add(self.Label)
         self.add(self.Outer_Rect)
     

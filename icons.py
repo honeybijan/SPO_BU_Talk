@@ -100,11 +100,13 @@ class StickFigure(VGroup):
 
     def group_of_sticks(n, width, scale, h_sep, v_sep, happy_prob=.5, red_prob = None):
         g = VGroup()
+        if red_prob:
+            red_inds = random.sample(list(range(n)), int(n * red_prob))
         for i in range(n):
             if not red_prob:
                 col = random_bright_color()
             else:
-                if random.random() < red_prob:
+                if i in red_inds:
                     col = RED
                 else:
                     col = BLUE
