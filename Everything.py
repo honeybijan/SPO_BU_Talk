@@ -1087,8 +1087,8 @@ class Everything(Slide):
                   TransformMatchingShapes(col_vecs[0], Z_vec2),
                   TransformMatchingShapes(exp_label, new_exp_label),
                   TransformMatchingShapes(exp_eq[0], new_exp_eq[0]),
+                  TransformMatchingShapes(exp_eq[1], new_exp_eq[1]),
                   TransformMatchingShapes(exp_eq[2], new_exp_eq[2]),
-                  exp_eq[1].animate.set_color(WHITE), 
                   U.animate.set_color(WHITE),
                   Y.animate.set_color(GREEN))
         self.wait(.2)
