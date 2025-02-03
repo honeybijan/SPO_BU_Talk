@@ -6,6 +6,8 @@ from scipy.stats import multivariate_normal
 from icons import *
 from CoinFlippingClasses import *
 from GraphManim import *
+import PIL
+PIL.Image.MAX_IMAGE_PIXELS = 183735200
 
 P_vec = lambda ob: MobjectMatrix([[MathTex(r"\mathbb{E}(" + ob.get_label_text() + r"|u^{(0)})").scale(.3)], [MathTex(r"\mathbb{E}(" + ob.get_label_text() + r"|u^{(1)})").scale(.3)]], bracket_h_buff=0.05, bracket_v_buff=0.05, v_buff=0.5).next_to(ob, DOWN)
 
@@ -85,12 +87,12 @@ class Everything(Slide):
         self.add(title)
 
         name = Text("Bijan Mazaheri").scale(.75)
-        position = Text("Postdoctoral Fellow").scale(.5)
-        name_pos = VGroup(name, position).arrange(DOWN).next_to(title, DOWN, buff=.5)
+        position = Text("Assistant Professor").scale(.5)
+        name_pos = VGroup(name, position).arrange(DOWN).next_to(title, DOWN, buff=1)
         self.add(name_pos)
 
-        schmidt = ImageMobject("schmidt.png").next_to(name_pos, DOWN, buff=.5)
-        self.add(schmidt)
+        dartmouth = SVGMobject("dartmouth-engineering.svg").next_to(name_pos, DOWN, buff=.5).scale_to_fit_width(4).to_edge(DOWN, buff = 1)
+        self.add(dartmouth)
         self.wait(.2)
         self.next_slide()
         self.clear()
@@ -1096,7 +1098,7 @@ class Everything(Slide):
         self.play(condition1.animate.set_color(YELLOW))
         self.wait(.2)
         self.next_slide()
-        self.play(condition1.animate.set_color(WHITE), FadeOut(VGroup(new_exp_label, new_exp_eq[0], exp_eq[1], new_exp_eq[2])))
+        self.play(condition1.animate.set_color(WHITE), FadeOut(VGroup(new_exp_label, new_exp_eq[0], new_exp_eq[1], new_exp_eq[2])))
         self.wait(.2)
         self.next_slide()
         # Add X1, X2, Z1, Z2 columns
@@ -1982,6 +1984,7 @@ class Everything(Slide):
         title, leftover = self.takeaways(title, leftover)
         title, leftover = self.outlook(title, leftover)
         title, leftover = self.thanks(title, leftover)
+        
 
 
 
